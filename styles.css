@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS'; 
+    background-image: url('bg\ body.png');
+    background-size: cover; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-image: url('bg\ header.png');
+    background-size: cover; 
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 35px 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Main Section */
+main {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Box intro with decorative elements */
+#intro {
+    position: relative; /* Pastikan box intro memiliki posisi relatif */
+    background-color: #263c7e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    border: 5px dashed #ffffff; /* Garis putus-putus dengan warna oranye */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    line-height: 1;
+    color: #ffffff; 
+    overflow: visible; /* Pastikan overflow terlihat */
+}
+
+/* Menambahkan gambar awan di pojok kiri bawah */
+#intro::before {
+    content: '';
+    position: absolute; /* Pastikan posisi gambar adalah absolute */
+    bottom: -82px; /* Memindahkan gambar ke bawah sehingga melayang */
+    left: -25px; /* Memindahkan gambar ke kiri */
+    width: 170px; /* Sesuaikan ukuran awan */
+    height: 170px; /* Sesuaikan ukuran awan */
+    background-image: url('awan-left.png'); /* Ganti dengan path file gambar awan Anda */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1; /* Pastikan berada di bawah bubble */
+    opacity: 1; /* Transparansi opsional */
+}
+
+/* Menambahkan gambar awan di pojok kanan atas */
+#intro::after {
+    content: '';
+    position: absolute; /* Pastikan posisi gambar adalah absolute */
+    top: -82px; /* Memindahkan gambar ke atas sehingga melayang */
+    right: -25px; /* Memindahkan gambar ke kanan */
+    width: 170px; /* Sesuaikan ukuran awan */
+    height: 170px; /* Sesuaikan ukuran awan */
+    background-image: url('awan-right.png'); /* Ganti dengan path file gambar awan Anda */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1; /* Pastikan berada di bawah bubble */
+    opacity: 1; /* Transparansi opsional */
+    overflow: hidden;
+}
+
+/* Bubble Decoration */
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #263c7e;
+    border-radius: 50%; /* Membuat lingkaran */
+    opacity: 0.6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Gelembung dengan shadow */
+    z-index: 2; /* Pastikan bubble berada di atas gambar awan */
+}
+
+/* Bubble positions */
+.bubble1 {
+    top: 20px;
+    right: 30px;
+}
+
+.bubble2 {
+    bottom: 10px;
+    left: 50px;
+}
+
+.bubble3 {
+    bottom: 50px;
+    right: 100px;
+}
+
+
+/* Quiz Section */
+#quiz-section {
+    background-image: url('bg\ kolom.png');
+    background-size: cover; 
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 700px; /* Membatasi lebar maksimum */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    text-align: left; /* Align the text to the left */
+    position: relative;
+}
+
+.question-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#quiz-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #263c7e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #263c7e;
+}
+
+/* Footer */
+footer {
+    background-color: #263c7e;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 7px solid #101881;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
